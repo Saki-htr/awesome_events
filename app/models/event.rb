@@ -10,6 +10,8 @@ class Event < ApplicationRecord
   has_many :tickets, dependent: :destroy
   belongs_to :owner, class_name: "User"
 
+  validates :image, content_type: [:png, :jpg, :jpeg]
+
   attr_accessor :remove_image
   before_save :remove_image_if_user_accept
 
