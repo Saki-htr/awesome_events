@@ -81,13 +81,13 @@ GEM
     dotenv-rails (2.8.1)
       dotenv (= 2.8.1)
       railties (>= 3.2)
-    elastic-transport (8.1.0)
-      faraday (< 3)
+    elasticsearch (7.4.0)
+      elasticsearch-api (= 7.4.0)
+      elasticsearch-transport (= 7.4.0)
+    elasticsearch-api (7.4.0)
       multi_json
-    elasticsearch (8.5.0)
-      elastic-transport (~> 8)
-      elasticsearch-api (= 8.5.0)
-    elasticsearch-api (8.5.0)
+    elasticsearch-transport (7.4.0)
+      faraday
       multi_json
     erubi (1.11.0)
     factory_bot (6.2.1)
@@ -230,9 +230,9 @@ GEM
       sprockets (> 3.0)
       sprockets-rails
       tilt
-    searchkick (4.3.0)
+    searchkick (4.6.3)
       activemodel (>= 5)
-      elasticsearch (>= 6)
+      elasticsearch (>= 6, < 7.14)
       hashie
     selenium-webdriver (4.4.0)
       childprocess (>= 0.5, < 5.0)
@@ -296,6 +296,7 @@ DEPENDENCIES
   byebug
   capybara (>= 2.15)
   dotenv-rails
+  elasticsearch (>= 6.0.0)
   factory_bot_rails
   hamlit-rails (~> 0.2.3)
   image_processing (~> 1.2)
@@ -309,7 +310,7 @@ DEPENDENCIES
   rails (~> 6.0.6)
   rails-i18n (~> 6.0.0)
   sass-rails (>= 6)
-  searchkick (~> 4.3.0)
+  searchkick (~> 4.6.3)
   selenium-webdriver
   spring
   spring-watcher-listen (~> 2.0.0)

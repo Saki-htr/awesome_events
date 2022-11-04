@@ -45,7 +45,7 @@ class Event < ApplicationRecord
       name: name,
       place: place,
       content: content,
-      owner_name: owner_name&.name,
+      owner_name: owner&.name,
       start_at: start_at
     }
   end
