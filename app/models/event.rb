@@ -1,4 +1,6 @@
 class Event < ApplicationRecord
+  searchkick language: "japanese"
+
   validates :name, length: { maximum: 50 }, presence: true
   validates :place, length: { maximum: 100 }, presence: true
   validates :content, length: { maximum: 2000 }, presence: true
@@ -36,5 +38,15 @@ class Event < ApplicationRecord
   # remove_imageがtrueになる値ならEvent保存時に画像削除
   def remove_image_if_user_accept
     self.image = nil if ActiveRecord::Type::Boolean.new.cast(remove_image)
+  end
+
+  def search_data
+    {
+      name: name,
+      place: place,
+      content: content,
+      owner_name: owner_name&.name,
+      start_at: start_at
+    }
   end
 end
