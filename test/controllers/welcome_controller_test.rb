@@ -5,5 +5,4 @@ class WelcomeControllerTest < ActionDispatch::IntegrationTest
     get root_path
     assert_response :success
   end
-
 end
