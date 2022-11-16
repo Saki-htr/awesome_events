@@ -50,6 +50,7 @@ group :development do
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
   gem 'brakeman'
+  gem 'rack-mini-profiler', require: false
 end
 
 group :test do
@@ -59,6 +60,7 @@ group :test do
   # Easy installation and use of web drivers to run system tests with browsers
   gem 'webdrivers', '>= 5.2.0'
   gem 'simplecov', require: false
+  gem 'coveralls', require: false
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
@@ -71,3 +73,4 @@ gem 'omniauth-rails_csrf_protection', '~> 0.1.2'
 
 gem 'dotenv-rails'
 gem 'rails-i18n', '~> 6.0.0'
+gem 'skylight'

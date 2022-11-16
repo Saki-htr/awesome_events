@@ -2,6 +2,8 @@ ENV['RAILS_ENV'] ||= 'test'
 # simplecovを使うときはコメントアウトを外す
 # require 'simplecov'
 # SimpleCov.start 'rails'
+require 'coveralls'
+Coveralls.wear!('rails')
 
 require_relative '../config/environment'
 require 'rails/test_help'
