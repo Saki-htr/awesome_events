@@ -1,7 +1,7 @@
 class Event < ApplicationRecord
-  searchkick language: "japanese"
+  # searchkick language: "japanese"
 
-  validates :name, length: { maximum: 50 }, presence: true
+  validates :name, name: {message: 'これはoptionsに入る'}, length: { maximum: 50 }, presence: true
   validates :place, length: { maximum: 100 }, presence: true
   validates :content, length: { maximum: 2000 }, presence: true
   validates :start_at, presence: true
