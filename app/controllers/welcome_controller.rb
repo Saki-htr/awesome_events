@@ -1,8 +1,8 @@
 class WelcomeController < ApplicationController
   skip_before_action :authenticate
   def index
-    @event_search_form = EventSearchForm.new(event_search_form_params)
-    @events = @event_search_form.search
+    # @event_search_form = EventSearchForm.new(event_search_form_params)
+    # @events = @event_search_form.search
   end
 
   private
